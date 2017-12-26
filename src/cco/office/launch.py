@@ -9,7 +9,7 @@ Start LibreOffice background process.
 """
 
 import logging
-from subprocess import run, Popen
+from subprocess import call, Popen
 import time
 
 import pyoo
@@ -34,7 +34,7 @@ def getUnoDesktop():
             desktop = pyoo.Desktop('localhost', 2002)
         except OSError:
             if count == 0:
-                proc = run(command, shell=True)
+                proc = call(command, shell=True)
                 logger.info('Office application started: %s.', proc)
             time.sleep(1)
             count += 1
