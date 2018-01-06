@@ -21,7 +21,8 @@ logger = logging.getLogger('cco.office')
 command = ' '.join([
         'soffice', '--accept="socket,host=localhost,port=2002;urp;"',
         '--pidfile=var/pid/office.pid',
-        '--norestore', '--nologo', '--nodefault', '--headless', '&'])
+        '--norestore', '--nologo', '--nodefault', '--headless',
+        '&'])
 
 
 def getUnoDesktop():
