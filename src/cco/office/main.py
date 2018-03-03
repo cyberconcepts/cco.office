@@ -51,7 +51,7 @@ def process(desktop, data, tplPath, resultPath):
             else:
                 value = val
             cell.value = value
-    doc.save(resultPath) #, pyoo.FILTER_EXCEL_2007)
+    doc.save(resultPath, pyoo.FILTER_EXCEL_2007)
     doc.close()
     return 0
 
